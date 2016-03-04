@@ -7,12 +7,12 @@
   DTS:CreatorName="LMC\hdoganay"
   DTS:DTSID="{21E81F1C-EE9C-49D8-B996-9272B372E8CD}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.700.219"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{D5228227-6779-4539-B17C-5767123F362E}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{0B6B5353-E479-4005-A181-E8002C1DFCDD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -423,6 +423,28 @@
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">LEFT(RIGHT(txt_sourcefile,12),6)</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[test]"
+                          dataType="empty"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[test]"
+                          name="test"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression"></property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression"></property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -1908,7 +1930,7 @@
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="8">
+  Version="sql12">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
@@ -1918,14 +1940,14 @@
         <NodeLayout
           Size="151,42"
           Id="Package\Foreach Loop Container\Data Flow Task"
-          TopLeft="46,32" />
+          TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="232,129"
-          Size="232,172"
+          PanelSize="401,189"
+          Size="401,232"
           Id="Package\Foreach Loop Container"
-          TopLeft="179,75" />
+          TopLeft="5.50000000000003,5.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1937,29 +1959,29 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Foreach Loop Container\Data Flow Task\insert into Table"
-          TopLeft="350,309" />
+          TopLeft="16.5,209.5" />
         <NodeLayout
           Size="177,42"
           Id="Package\Foreach Loop Container\Data Flow Task\Extract Flat File Data"
-          TopLeft="347,66" />
+          TopLeft="5.50000000000001,5.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\Foreach Loop Container\Data Flow Task\Derived Column"
-          TopLeft="357,179" />
+          TopLeft="17,107.5" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="434.75,108">
+          TopLeft="94,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,63.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1970,18 +1992,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="430.75,221">
+          TopLeft="94,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,80.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1993,13 +2015,5 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach Loop Container\Data Flow Task\insert into Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
